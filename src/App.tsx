@@ -1,34 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import "antd/dist/antd.min.css";
+import { Carousel } from "antd";
+import Pictrue from "./components/Pictrue";
+import Pixel from "./components/Pixel";
+import ThreeD from "./components/ThreeD";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const contentStyle: React.CSSProperties = {
+    height: "100vh",
+    width: "100%",
+    color: "#fff",
+    lineHeight: "160px",
+    textAlign: "center",
+    background: "#364d79",
+  };
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        <Pictrue />
+      {/* <Carousel dotPosition="right">
+        <div style={contentStyle}>
+        
+        </div>
+        <div style={contentStyle}>
+          <Pixel />
+        </div>
+        <div style={contentStyle}>
+          <ThreeD />
+        </div>
+      </Carousel> */}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,54 @@
+.pictrue{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: aliceblue;
+    overflow: hidden;
+}
+.pictrue_now{
+    margin: 20px 40px;
+    height: calc(100% - 180px);
+    background-color: red;
+}
+.pictrue_old{
+    padding:0  40px;
+    height: 100px;
+    overflow: auto;
+    width: auto;
+}
+.pictrue_old_item{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+h1{
+    text-align: left;
+    padding: 40px 0px 0px 40px;
+}
+.pictrue_content{
+    height: 80%;
+    width: calc(100% - 80px);
+    margin: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pictrue_content_left{
+    width: 60%;
+    height: 100%;
+     border: 1px solid pink;
+}
+.pictrue_content_right{
+    margin:0 40px;
+    width: 40%;
+    height: 100%;
+}
+.params{
+    width: auto;
+    display: flex;
+    align-items: center;
+    height: auto;
+}
+.ant-slider{
+    width: 80%;
+}

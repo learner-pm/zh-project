@@ -3,7 +3,7 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-
+  height: 100%;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
@@ -13,6 +13,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  
+}
+
+*{
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -26,10 +32,11 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
+  height: 100%;
+  /* display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100vh; */
 }
 
 h1 {
