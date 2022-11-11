@@ -41,7 +41,13 @@ const RightContent: React.FC<Props> = (props) => {
     <>
       <div className="app_right">
         <img src={img} id="imgs"></img>
-        <canvas id="canvas" ref={cvs} className="canvas" width={400} height={400}></canvas>
+        <canvas
+          id="canvas"
+          ref={cvs}
+          className="canvas"
+          width={400}
+          height={400}
+        ></canvas>
       </div>
     </>
   );

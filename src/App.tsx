@@ -17,7 +17,8 @@ function App() {
   };
   return (
     <div className="App">
-        <Pictrue />
+      <ThreeD />
+      <Pictrue />
       {/* <Carousel dotPosition="right">
         <div style={contentStyle}>
         
