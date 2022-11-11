@@ -63,7 +63,11 @@ const beforeUpload = (file: RcFile) => {
 
 const root = "http://192.168.43.184:8081";
 
-const Pictrue: React.FC = () => {
+interface Props {
+  onSet: (boolean: boolean) => void;
+}
+
+const Pictrue: React.FC<Props> = ({ onSet }) => {
   // old的
   const [url, setUrl] = useState("");
   // 处理后的
@@ -307,6 +311,9 @@ const Pictrue: React.FC = () => {
           </div>
         </div>
       </div>
+      <Button onClick={() => onSet(false)} className="next-btn">
+        下一站
+      </Button>
     </div>
   );
 };
