@@ -1,7 +1,13 @@
 import React from "react";
+import { Html } from "@react-three/drei";
+import { Spin } from "antd";
 
 const Loader: React.FC = () => {
-  return <div>加载中。。。</div>;
+  return (
+    <Html center>
+      <Spin></Spin>
+    </Html>
+  );
 };
 
 export default Loader;

@@ -10,12 +10,10 @@ interface props {
   color?: any;
 }
 
-const DamagedHelmet: React.FC<props> = (props) => {
+const Tank: React.FC<props> = (props) => {
   const { gl, scene, camera } = useThree();
   const group = useRef<any>();
-  const gltf = useGLTF("/gltf/DamagedHelmet.gltf");
-
-  console.log("gltf", gltf);
+  const gltf = useGLTF("/gltf/tank.gltf");
 
   useFrame(({ clock, camera: abc }) => {
     if (group.current && props.start) {
@@ -26,8 +24,6 @@ const DamagedHelmet: React.FC<props> = (props) => {
 
   useEffect(() => {
     gltf.scene.traverse(function (obj: any) {
-      console.log("obj", obj);
-
       if (obj.isMesh) {
         obj.material.color.set(props.color);
       }
@@ -46,8 +42,6 @@ const DamagedHelmet: React.FC<props> = (props) => {
   );
 };
 
-useGLTF.preload("/assets/gltf/DamagedHelmet.gltf");
+useGLTF.preload("/gltf/tank.gltf");
 
-export default DamagedHelmet;
-
-// DamagedHelmet
+export default Tank;
