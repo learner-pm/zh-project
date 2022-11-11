@@ -1,12 +1,14 @@
 .three_d {
-  height: 800px;
+  /* height: 800px; */
   /* width: 500px; */
   padding-bottom: 300px;
+  display: flex;
+  justify-content: space-between;
 }
 .canvas-container {
   position: relative;
   height: 500px;
-  width: 500px;
+  width: 1000px;
 }
 .button {
   position: absolute;
@@ -33,9 +35,11 @@
 
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   align-content: space-around;
+  width: 500px;
+  margin-top: 10px;
 }
 .item {
   width: 40px;

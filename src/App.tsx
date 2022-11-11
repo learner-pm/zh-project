@@ -7,7 +7,7 @@ import Pixel from "./components/Pixel";
 import ThreeD from "./components/ThreeD";
 
 function App() {
-  const [showPic, setshowPic] = useState(true);
+  const [showPic, setshowPic] = useState(false);
   const contentStyle: React.CSSProperties = {
     height: "100vh",
     width: "100%",
