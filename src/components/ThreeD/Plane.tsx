@@ -4,35 +4,38 @@ import { useGLTF } from "@react-three/drei";
 import { useFrame, useLoader, useThree } from "@react-three/fiber";
 
 interface props {
+  start: boolean;
   props?: any;
 }
 const Plane: React.FC<props> = (props) => {
-  const { gl,scene,camera } = useThree();
+  const { gl, scene, camera } = useThree();
   const group = useRef<any>();
-  const gltf = useGLTF("../../../src/assets/gltf/123.gltf");
+  const gltf = useGLTF("/gltf/123.gltf");
 
-  console.log('gl,scene,camera',gl,scene,camera);
-  
-  useFrame(({ clock,camera:abc }) => {
-    if (group.current) {
+  console.log(gltf);
+
+  useFrame(({ clock, camera: abc }) => {
+    if (group.current && props.start) {
       group.current.rotation.y = clock.elapsedTime * 0.5;
     }
   });
-console.log('group',group.current);
+  console.log("group", group.current);
 
   return (
     <group ref={group} {...props} dispose={null}>
+      {/* <group>
+        <mesh name="Headphones" geometry={gltf.nodes.战机06.geometry} material={gltf.materials.M_Headphone} {...extras} />
+        </group> */}
       <primitive
         object={gltf.scene}
         onClick={(e: any) => {
           console.log(e);
         }}
-      ></primitive>
+      />
     </group>
   );
 };
 
-
-useGLTF.preload("../../../src/assets/gltf/123.gltf");
+useGLTF.preload("/gltf/123.gltf");
 
 export default Plane;

@@ -13,6 +13,7 @@ import "./index.css";
 
 const ThreeD: React.FC = () => {
   const [preset, setPreset] = useState<Preset | undefined>(presetInfo[0].value);
+  const [start, setStart] = useState(true);
   return (
     <div className="three_d">
       <h1>取个名字真难队的神秘商店</h1>
@@ -30,7 +31,7 @@ const ThreeD: React.FC = () => {
 
         <Suspense>
           <Environment preset={preset} background />
-          <DamagedHelmet></DamagedHelmet>
+          <Plane start={start}></Plane>
         </Suspense>
       </Canvas>
       <div>
@@ -41,10 +42,10 @@ const ThreeD: React.FC = () => {
           }}
           options={presetInfo}
         />
+        <span onClick={() => setStart(!start)}>{start ? "开始" : "暂停"}</span>
       </div>
     </div>
   );
 };
-
 
 export default ThreeD;
