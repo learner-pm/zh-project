@@ -2,24 +2,78 @@
     position: relative;
     height: 100vh;
     width: 100%;
-    background-color: aliceblue;
+    background-color: #7ec1ff7d;
     overflow: hidden;
 }
-.pictrue_now{
-    margin: 20px 40px;
-    height: calc(100% - 180px);
+.title{
+    font-size: 22px;
+    line-height: 22px;
+    padding-top: 10px;
+    color: #7ec1ff;
+}
+.card{
+    background-color: #7ec1ff7d;
+    padding: 0 10px;
+    margin-top: 18px;
+}
+.h1{
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 70px;
+    font-size: 18px;
+    display: flex;
+}
+.h1_p{
+    cursor: pointer;
+    margin:0 10px;
+}
+.h1_p:hover{
+    transform: scale(1.1);
+}
+.pictrue_out{
+   display: flex;
+   justify-content: space-between;
+}
+.pictrue_out_line{
+    position: absolute;
+    height: 100%;
+    width: 8px;
     background-color: red;
 }
+.pictrue_now{
+    margin-right: 40px;
+    height: 300px;
+    width: 300px;
+    border: 4px solid #7ec1ff7d;
+}
+.pictrue_button{
+    position: absolute;
+    bottom: 140px;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
 .pictrue_old{
-    padding:0  40px;
-    height: 100px;
+    height: 150px;
+    width: 100%;
+    margin-top: 40px;
+    max-width: 100%;
     overflow: auto;
     width: auto;
+    border: 4px solid #7ec1ff7d;
 }
 .pictrue_old_item{
     width: 100px;
     height: 100px;
-    background-color: red;
+    float: left;
+    margin-right: 40px;
+    border: 4px solid white;
+}
+.pictrue_old_item :hover{
+    cursor: pointer;
+    box-shadow: 5px 0 0 0 0 black;
+    transform: scale(1.2);
 }
 h1{
     text-align: left;
@@ -27,20 +81,23 @@ h1{
 }
 .pictrue_content{
     height: 80%;
-    width: calc(100% - 80px);
-    margin: 0 40px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: white;
+    border-radius: 4px;
 }
 .pictrue_content_left{
-    width: 60%;
+    margin:0 40px; 
+    width: auto;
     height: 100%;
-     border: 1px solid pink;
 }
 .pictrue_content_right{
-    margin:0 40px;
-    width: 40%;
+    margin-top: 70px;
+    width: 35%;
     height: 100%;
 }
 .params{
@@ -48,6 +105,7 @@ h1{
     display: flex;
     align-items: center;
     height: auto;
+    margin-bottom: 10px;
 }
 .ant-slider{
     width: 80%;
