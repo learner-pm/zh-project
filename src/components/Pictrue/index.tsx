@@ -21,7 +21,8 @@ const Pictrue: React.FC = () => {
             }}
           >
             <div className="params">
-              <p>美白 ：</p> <Slider defaultValue={30} tooltip={{ open: true }} />
+              <p>美白 ：</p>{" "}
+              <Slider defaultValue={30} tooltip={{ open: true }} />
             </div>
             <div className="params">
               廋脸 ： <Slider defaultValue={30} tooltip={{ open: true }} />
